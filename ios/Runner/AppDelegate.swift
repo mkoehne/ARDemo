@@ -9,9 +9,9 @@ import Flutter
   ) -> Bool {
     GeneratedPluginRegistrant.register(with: self)
     
-    let viewFactory = ARViewFactory()
-    
-    registrar(forPlugin: "Kitty").register(viewFactory, withId: "ARView")
+    let controller : FlutterViewController = window?.rootViewController as! FlutterViewController
+    let arDrawViewFactory = ARViewFactory(withMessenger: controller)
+    registrar(forPlugin: "ARKit").register(arDrawViewFactory, withId: "ARViewController")
     
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }

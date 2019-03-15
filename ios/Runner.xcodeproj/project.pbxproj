@@ -18,8 +18,10 @@
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
-		D763A1B0223B873A00448D02 /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D763A1AF223B873A00448D02 /* ARView.swift */; };
-		D763A1B2223B87BA00448D02 /* ARViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D763A1B1223B87BA00448D02 /* ARViewFactory.swift */; };
+		D7A0AD99223B8D9200F28A3B /* SCNVector3Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0AD98223B8D9200F28A3B /* SCNVector3Extensions.swift */; };
+		D7A0AD9B223B8DDE00F28A3B /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A0AD9A223B8DDE00F28A3B /* art.scnassets */; };
+		D7A0AD9D223B96EF00F28A3B /* ARViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0AD9C223B96EF00F28A3B /* ARViewFactory.swift */; };
+		D7A0AD9F223B972A00F28A3B /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0AD9E223B972A00F28A3B /* ARViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,8 +55,10 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D763A1AF223B873A00448D02 /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
-		D763A1B1223B87BA00448D02 /* ARViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewFactory.swift; sourceTree = "<group>"; };
+		D7A0AD98223B8D9200F28A3B /* SCNVector3Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNVector3Extensions.swift; sourceTree = "<group>"; };
+		D7A0AD9A223B8DDE00F28A3B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		D7A0AD9C223B96EF00F28A3B /* ARViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewFactory.swift; sourceTree = "<group>"; };
+		D7A0AD9E223B972A00F28A3B /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				D73AA526223BACFE00F96B0D /* Helpers */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -112,8 +117,9 @@
 				1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */,
 				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
 				74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */,
-				D763A1AF223B873A00448D02 /* ARView.swift */,
-				D763A1B1223B87BA00448D02 /* ARViewFactory.swift */,
+				D7A0AD9A223B8DDE00F28A3B /* art.scnassets */,
+				D7A0AD9C223B96EF00F28A3B /* ARViewFactory.swift */,
+				D7A0AD9E223B972A00F28A3B /* ARViewController.swift */,
 			);
 			path = Runner;
 			sourceTree = "<group>";
@@ -123,6 +129,14 @@
 			children = (
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D73AA526223BACFE00F96B0D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D7A0AD98223B8D9200F28A3B /* SCNVector3Extensions.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
+				D7A0AD9B223B8DDE00F28A3B /* art.scnassets in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
 				9740EEB41CF90195004384FC /* Debug.xcconfig in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
@@ -232,10 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D763A1B2223B87BA00448D02 /* ARViewFactory.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
-				D763A1B0223B873A00448D02 /* ARView.swift in Sources */,
+				D7A0AD9D223B96EF00F28A3B /* ARViewFactory.swift in Sources */,
+				D7A0AD99223B8D9200F28A3B /* SCNVector3Extensions.swift in Sources */,
+				D7A0AD9F223B972A00F28A3B /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
